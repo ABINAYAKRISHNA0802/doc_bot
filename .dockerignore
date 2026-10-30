@@ -1,0 +1,29 @@
+# Git
+.git
+.gitignore
+
+# Python cache
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Dev/test files — container-ல் தேவையில்லை
+evaluation/
+app/
+main.py
+
+# Secrets — GROQ_API_KEY container-க்கு runtime env var-ஆக கொடுக்கணும்
+.env
+
+# Editor files
+.vscode/
+*.egg-info/
+dist/
+build/
