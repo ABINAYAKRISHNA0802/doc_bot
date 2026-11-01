@@ -1,17 +1,4 @@
-# Secrets — never commit!
 .env
-
-# Python cache
 __pycache__/
 *.pyc
-*.pyo
-
-# HuggingFace model cache
-.cache/
-
-# Evaluation outputs (optional)
-evaluation/eval_results_*.csv
-
-# Virtual environments
-venv/
-.venv/
+evaluation/*.csv

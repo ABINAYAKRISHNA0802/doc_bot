@@ -68,6 +68,24 @@ if "llm" not in st.session_state:
 with st.sidebar:
     st.header("📄 Webpage Load பண்ணுங்க")
 
+    # ── HuggingFace Token (optional) ──────────
+    st.subheader("🤗 HuggingFace Login")
+    hf_token_default = os.getenv("HUGGINGFACEHUB_API_TOKEN", "")
+    hf_token_input = st.text_input(
+        "HuggingFace Token (optional)",
+        value=hf_token_default,
+        type="password",
+        placeholder="hf_xxxxxxxxxxxxxxxxxxxx",
+        help="Gated models அல்லது rate limit பிரச்சனை இருந்தால் உங்கள் HF token போடுங்க. huggingface.co/settings/tokens-ல் பெறலாம்.",
+    )
+    if hf_token_input.strip():
+        os.environ["HUGGINGFACEHUB_API_TOKEN"] = hf_token_input.strip()
+        st.success("✅ HF Token set!")
+    else:
+        st.caption("Token இல்லாமலும் public models வேலை செய்யும்.")
+
+    st.divider()
+
     url_input = st.text_input(
         "Website URL",
         placeholder="https://example.com/page",
