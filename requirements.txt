@@ -1,13 +1,25 @@
-langchain
-langchain-community
-langchain-core
-langchain-text-splitters
-langchain-groq
-faiss-cpu
-sentence-transformers
-requests
-beautifulsoup4
-streamlit
-python-dotenv
-fastapi
-uvicorn[standard]
+# Core LangChain
+langchain==0.3.25
+langchain-community==0.3.24
+langchain-core==0.3.58
+langchain-text-splitters==0.3.8
+langchain-groq==0.3.2
+langchain-huggingface==0.1.2
+
+# Vector store
+faiss-cpu==1.9.0
+
+# Embeddings — CPU-only torch (Streamlit Cloud memory limit)
+torch==2.5.1+cpu --extra-index-url https://download.pytorch.org/whl/cpu
+sentence-transformers==3.3.1
+
+# Web scraping
+requests==2.32.3
+beautifulsoup4==4.12.3
+
+# App
+streamlit==1.41.1
+python-dotenv==1.0.1
+
+# PDF support
+pymupdf==1.25.5
