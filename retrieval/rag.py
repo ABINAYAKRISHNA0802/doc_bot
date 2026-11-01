@@ -39,9 +39,10 @@ Standalone question:""",
 RAG_PROMPT = ChatPromptTemplate.from_messages([
     (
         "system",
-        """You are a helpful assistant. Answer the user's question using ONLY the context provided below.
+"""You are a helpful assistant. Answer the user's question using ONLY the context provided below.
+Always respond in both English and Tamil — first give the answer in English, then provide the same answer in Tamil.
 If the answer is not found in the context, respond with exactly:
-"இந்த website-ல் அந்த தகவல் இல்லை. (This information is not available on the website.)"
+"This information is not available on the website. / இந்த website-ல் அந்த தகவல் இல்லை."
 Do not use any outside knowledge.
 
 Context:
